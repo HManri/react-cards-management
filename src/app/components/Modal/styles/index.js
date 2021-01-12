@@ -1,0 +1,41 @@
+export default (theme) => ({
+    root: {
+        position: 'fixed',
+        zIndex: '1',
+        backgroundColor: 'rgba(33, 33, 33, 0.55)',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        opacity: 0,
+        transition: 'opacity 300ms ease-in-out',
+    },
+    open: {
+        opacity: 1,
+    },
+    close: {
+        position: 'absolute',
+        top: '10px',
+        right: '10px',
+        cursor: 'pointer',
+        ...theme.text.default,
+        fontSize: '24px',
+    },
+    body: {
+        position: 'relative',
+        backgroundColor: theme.colors.white,
+        boxShadow: '0 3px 9px 0 rgba(0, 0, 0, 0.25)',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        transform: 'translate(-50%, -50%)',
+        width: '700px',
+        borderRadius: '5px',
+        padding: '20px',
+        '@media (max-width: 720px)': {
+            width: '400px',
+        },
+    },
+});
